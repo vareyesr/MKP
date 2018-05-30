@@ -10,7 +10,7 @@
 #include "MKP.h"
 
 MKP::MKP(const char* inputFileName){
-	input = inputFileName;/**/
+	input = inputFileName;
 	nb_knapsacks = 0;
 	nb_objects = 0;
 	optimum = 0;
