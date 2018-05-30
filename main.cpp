@@ -23,7 +23,7 @@ int main(int argc, char** argv){
     std::srand(random_seed);
     /*Input reading*/
 	MKP problem(argv[1]);
-
+	/*Set parameters of search*/
 
 
 	return 0 ;

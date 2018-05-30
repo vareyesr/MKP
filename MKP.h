@@ -19,9 +19,11 @@ using namespace std;
 
 class MKP {
 private:
-    char* input;
+    std::string _input;
 public:
-	MKP(const char* inputFileName);
+	MKP(std::string inputFileName);
+
+	void read_file(std::string input);
 	/*number of knapsacks*/
 	int nb_knapsacks;
 	/*number of objects*/
@@ -31,7 +33,7 @@ public:
 	/*knapsack capacities*/
 	vector<int> capacities;
 	/*matrix of constraints*/
-//	int ctrs[nb_knapsacks][nb_objects];
+	vector<vector <int>> ctrs;
 	/*known optimum  (should I use it?)*/
 	int optimum;
 };
