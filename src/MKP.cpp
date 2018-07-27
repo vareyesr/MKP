@@ -7,7 +7,7 @@
  * Last Update:   	May 30th 2018
  */
 
-#include "MKP.h"
+#include <MKP.h>
 
 MKP::MKP(std::string inputfileName): _input(inputfileName),nb_knapsacks(0),nb_objects(0),optimum(0){
 	read_file(_input);
@@ -19,6 +19,7 @@ void MKP::read_file(std::string input){
 	file.open(input);
 	file >> nb_knapsacks;
 	file >> nb_objects;
+
 	/*storing number of objects*/
 	for (int i = 0 ; i < nb_objects ; i++){
 		int _aux;

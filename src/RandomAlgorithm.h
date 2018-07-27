@@ -9,14 +9,17 @@
 
 #ifndef RANDOMALGORITHM_H_
 #define RANDOMALGORITHM_H_
-#include "Star.h"
-#include "MKP.h"
+#include <Star.h>
+#include <MKP.h>
 
 
 class RandomAlgorithm{
+public:
+	RandomAlgorithm(const MKP problem);
 
-	RandomAlgorithm(const MKP problem, Star _star);
+	void solve(vector<Star> stars, int nb_stars);
 
+	MKP problem;
 };
 
 
