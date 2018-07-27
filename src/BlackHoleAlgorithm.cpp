@@ -27,9 +27,6 @@ void BlackHoleAlgorithm::create_population(){
 	}
 	RandomAlgorithm Random_algo(problem);
 	Random_algo.solve(stars,population-begin);
-	for (int i = 0 ; i < stars[0].star.size(); i++)
-		cout << stars[0].star[i] << endl;
-	exit(1);
 };
 
 void BlackHoleAlgorithm::set_blackhole(){
@@ -46,11 +43,14 @@ void BlackHoleAlgorithm::set_blackhole(){
 			stars[i].is_blackhole = false;
 		else
 			stars[i].is_blackhole = true;
+	cout << "blackhole fitness: " << stars[pos].fitness << endl;
+	exit(1);
 };
 
 void BlackHoleAlgorithm::search(){
 
 	while(double(clock()-start_time) / CLOCKS_PER_SEC < MAX_TIME){
+		set_blackhole();
 		vector<int> new_elements = movement();
 		evaluate_population(new_elements);
 		if (stars.size() < population){

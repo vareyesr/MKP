@@ -38,10 +38,24 @@ void MKP::read_file(std::string input){
 		ctrs.push_back(_aux);
 		for (int j = 0 ; j < nb_knapsacks ; j++){
 			int _element;
-			file >> _element;
+			//file >> _element;
+			_element = 0;
 			ctrs[i].push_back(_element);
 		}
 	}
+	for (int j = 0 ; j < nb_knapsacks ; j++){
+		for (int i = 0 ; i < nb_objects ; i++){
+			int _element;
+			file >> _element;
+			ctrs[i][j] = _element;
+		}
+	}
+
 	/*storing the optimum (?)*/
 	file >> optimum;
+//	for (int i = 0 ; i < nb_objects ; i++){
+//		for (int j = 0 ; j < nb_knapsacks ; j++)
+//			cout << ctrs[i][j] << " ";
+//	cout << endl;
+//	}
 }
