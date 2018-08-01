@@ -16,6 +16,8 @@
 #include <MKP.h>
 #include <Star.h>
 #include <RandomAlgorithm.h>
+#include <cmath>
+#include <cstdlib>
 
 
 using namespace std;
@@ -27,14 +29,15 @@ public:
 
 	void create_population();
 
-	void evaluate_population(vector<int> new_elements);
-
-	vector<int> movement();
+	void movement();
 
 	void set_blackhole();
-
+	void event_horizon();
+	void fix_solutions();
 	void search();
 
+	double best_solution;
+	int star_best_sol;
 	int population;
 	double start_time;
 	double MAX_TIME;

@@ -20,6 +20,7 @@ public:
 	void solve(vector<Star>& stars, int nb_stars);
 
 	MKP problem;
+	double best_solution;
 };
 
 

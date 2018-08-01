@@ -9,7 +9,7 @@
 
 #include <RandomAlgorithm.h>
 
-RandomAlgorithm::RandomAlgorithm(const MKP problem):problem(problem){
+RandomAlgorithm::RandomAlgorithm(const MKP problem):problem(problem),best_solution(0){
 
 }
 
@@ -20,7 +20,7 @@ void RandomAlgorithm::solve(vector<Star>& stars, int req_stars){
 			int random_var = rand()%(stars[i].allowed_pos.size());
 			int position = stars[i].allowed_pos[random_var];
 			stars[i].allowed_pos.erase(stars[i].allowed_pos.begin()+random_var);
-			if (stars[i].check_position(position)){
+			if (stars[i].instanciate_position(position)){
 				stars[i].star[position] = 1;
 			}
 		}
